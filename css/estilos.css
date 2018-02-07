@@ -307,6 +307,7 @@ footer{
 @media(max-width:640px){
     .burger{display: initial;}
     nav{display: none;}
+    .hero{background-attachment: scroll;} /*para iphone se vea el fondo*/
     .hero h1{
         text-align: center;
         padding: 0 10px;
