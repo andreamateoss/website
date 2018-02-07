@@ -99,7 +99,7 @@ header nav ul li {padding: 0 15px;}
     background-image: url('../img/computer-3114274_1920.jpg');
     background-position: center; /*centra la imagen*/
     background-size: cover;
-    background-attachment: fixed; /*queda la imagen fija y se mueve el texto*/
+   /* background-attachment: fixed;*/ /*queda la imagen fija y se mueve el texto*/ /*lo comento por que no lo necesito al ponerlo en la media de 1280*/
     /* para colocar el mensaje de bienvenida */
     display: flex; 
     flex-direction: column;
@@ -152,8 +152,8 @@ header nav ul li {padding: 0 15px;}
     padding: 60px 40px;
     background-image: url('../img/flat-2879273_1920.jpg');
     background-position: center; /*para bajar el fonod un poco*/
-    background-size: cover; /*para bajar el fonod un poco*/
-    background-attachment: fixed;} /*para que cuando bajes baje la imagen tambien*/
+    background-size: cover;} /*para bajar el fonod un poco*/
+    /*background-attachment: fixed;*/ /*para que cuando bajes baje la imagen tambien*/ /*la comento por que al ponerla en la media de 1280 no lo necesito*/
 .eslogan{
     font-size: 40px;
     padding: 20px;
@@ -293,6 +293,9 @@ footer{
 .legales ul{padding-left: 40px;}
 
 /* Media queries */
+@media (max-width:1280px){
+    .hero, .fondo{background-attachment: fixed;}}
+
 @media(max-width:720px){
     .fila{
         display: flex;
