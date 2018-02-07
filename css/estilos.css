@@ -1,0 +1,337 @@
+/* Estilos generales */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;}
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;}
+    /*line-height: 1.5em;interlineado del texto*/
+
+a{
+    text-decoration: none; /* para quitar la barra de debajo de los enlaces*/
+    color: olivedrab;}
+
+a:hover{color:salmon;} /*para cuando paso el cursor en los iconos y enlaces se cambie de color*/
+a.activo{color:salmon;}
+
+
+/*Poner imagen y texto en columnas iguales*/
+img{max-width: 100%; }
+.pie{
+    display: flex;
+    align-items: flex-end;}
+
+/*para poner intermitente la flecha*/
+@keyframes intermitente{
+    0% {opacity:  0;}
+    50% {opacity:  1;}
+    100% {opacity:  0;}}
+
+/*Poner texto en la web*/
+    .fila{
+        margin: 40px;
+        display: flex;
+        flex-wrap: wrap;} /*pone en columnas cuando no cogen en la página */
+    .col1{
+        padding: 10px;
+        flex-basis: 300px;
+        flex-grow: 1;}
+    .col2{
+        padding: 10px;
+        flex-basis: 300px;
+        flex-grow: 2;}
+    .col3{
+        padding: 10px;
+        flex-basis: 300px;
+        flex-grow: 3;}
+    /*Imagen de al lado del texto*/
+    .centrado{
+        display: flex;
+        justify-content: center;
+        align-items: center;}
+    
+/* Cabecera barra de navegación */
+header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    display: flex; /* coloca los elementos que tiene dentro*/
+    justify-content: space-between; /*lleva los elementos a los extremos(derecha de la web)*/
+    align-items: center;
+    /* padding: 0 10px; */
+    box-shadow: 0px 4px 4px salmon;}
+
+/* Ejemplo barra horizontal en el inicio solo en contacto y no en index */
+header.blanco{box-shadow: initial;}
+
+/* barra de navegacion hamburgesa */
+.burger{
+    font-size: 34px;
+    display: none;}/*lo pongo para que se oculte y no quite espacio a la barra*/
+
+.blanco .burger{color:olivedrab;}
+
+.blanco .burger:hover{color: salmon;}
+.logo{
+    font-size: 50px;
+    color:olivedrab;}
+
+.blanco .logo{color:olivedrab;} /*color de la garrapata*/
+.blanco .logo:hover{color:salmon;}
+
+header nav ul{
+    list-style: none;/*para que deje de ser lista*/
+    display: flex;}
+
+header nav ul li {padding: 0 15px;}
+
+.blanco nav ul li a{ color: olivedrab;}
+.blanco nav ul li a:hover{ color: salmon;}
+.blanco nav ul li a.activo{ color: salmon;}
+
+/* Hero */
+.hero{
+    height: 100vh;
+    background-image: url('../img/computer-3114274_1920.jpg');
+    background-position: center; /*centra la imagen*/
+    background-size: cover;
+    background-attachment: fixed; /*queda la imagen fija y se mueve el texto*/
+    /* para colocar el mensaje de bienvenida */
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;}
+
+/* Mensaje de bienvenida */
+.hero h1{
+   color: salmon;
+   font-size: 50px;}
+
+.hero h2{
+    color: olivedrab;
+    margin-bottom: 60px;}
+
+.hero a{
+    color:salmon;
+    font-size: 40px;
+    margin-bottom: 60px;
+    /*para poner intermitente la flecha, va con @keyframes*/
+    animation-name: intermitente;
+    animation-duration: 1500ms;
+    animation-iteration-count: infinite;}
+
+/*Poner link en iconos*/
+.columna{
+    display: flex;
+    flex-direction: column;
+    align-items: center;}
+
+/* Poner botones */
+.boton{
+    margin: 20px;
+    color: white;
+    font-size: 22px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(250, 128, 114, 0.438);}
+.naranja{background-color: tomato;}
+.azul{background-color: steelblue;}
+.amarillo{background-color: #E8A50A;}
+    /*cuando pases el cursor se ponga de estos colores*/
+    .naranja:hover{background-color: rgba(255, 99, 71, 0.589); color:white;}
+    .azul:hover{background-color: rgba(70, 131, 180, 0.521); color:white;}
+    .amarillo:hover{background-color: rgba(232, 162, 10, 0.678); color:white;}
+
+/* Ejemplo poner una imagen en el fondo del titulo */
+.fondo{
+    margin: 0;
+    padding: 60px 40px;
+    background-image: url('../img/flat-2879273_1920.jpg');
+    background-position: center; /*para bajar el fonod un poco*/
+    background-size: cover; /*para bajar el fonod un poco*/
+    background-attachment: fixed;} /*para que cuando bajes baje la imagen tambien*/
+.eslogan{
+    font-size: 40px;
+    padding: 20px;
+    background-color:rgba(250, 128, 114, 0.555);}
+
+.separadores{
+    display: none;
+    border:solid 1px salmon;
+    width: 60%;}
+
+/* Texto de al lado de sos */
+p{
+    line-height: 1.5em;
+    padding: 20px;}
+
+/* Suscribete */
+.miniform{
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;}
+.miniform input{
+    border: solid 1px salmon;
+    color: salmon;
+    font-size: 24px;
+    padding: 10px;}
+input:focus{outline: none;} /*para que cuando pulses se quede el color de fuera*/
+.miniform .boton{
+    border: solid 1px rgba(250, 128, 114, 0.521);
+    color: white;
+    font-size: 24px;
+    padding: 10px;}
+.miniform p{/*texto de subcribete*/
+    color:salmon;
+    font-size: 28px;}
+
+/*Pie de página*/
+footer{
+    background-color: dimgray;
+    color: salmon;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /*Esto es copiado de esta página http://lea.verou.me/css3patterns/*/
+    background-color:rgba(0, 0, 0, 0.658);
+    background-image:
+    radial-gradient(white, rgba(255, 255, 255, 0.062) 2px, transparent 40px),
+    radial-gradient(white, rgba(255, 255, 255, 0.021) 1px, transparent 30px),
+    radial-gradient(white, rgba(255, 255, 255, 0.014) 2px, transparent 40px),
+    radial-gradient(rgba(255, 255, 255, 0.062), rgba(255,255,255,.1) 2px, transparent 30px);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px; 
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+    position: relative;}/*lo pongo para que el boton footer no se vaya para arriba*/
+
+.izdo{
+    padding: 15px;
+    flex-basis: 300px;
+    flex-grow: 1;}
+.dcho{
+    border: solid 1px whitesmoke;
+    padding: 15px;
+    flex-basis: 300px;
+    flex-grow: 1;
+    /*poner bonito derecho*/ /*hemos cambiado el justifity content y align items y hemos añadido flex diretion*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;}
+    /*antes .rrss se llamaba .dcho a{}*/
+    .rrss a{
+    color: whitesmoke;
+    font-size: 32px;
+    padding: 5px;}
+.centro{
+    border: solid 1px whitesmoke;
+    padding: 15px;
+    flex-basis: 300px;
+    flex-grow: 1;
+    /*poner bonito el centro*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;}
+
+    /* Poner bonito el centro */
+    /*antes se llamaban .centro a {} los foooter*/
+    footer a{
+        color: whitesmoke;
+        font-size: 18px;
+        padding: 5px;}
+    footer a:hover{color: salmon;}
+    footer a.activo{color: salmon;}
+
+
+.copy{
+    border: solid 1px whitesmoke;
+    padding: 5px;
+    width: 100%;}
+    /* Poner bonito el izquierdo */
+    footer p{
+        font-size: 18px;
+        padding: 5px;}
+    .copy p{
+        font-size: 14px;
+        text-align: center;}
+
+/* Botón en el footer para subir al inicio de la pagina */ 
+.top{
+    height: 50px;
+    width: 50px;
+    background-color: rgba(0, 0, 0, 0.829);
+    position: absolute; /*el padre(footer) tiene que estar posicionado para que no se vaya arriba de la pagina*/
+    top: -30px; /*para posicionarlo como sobrepuesto, a 30px del padre*/
+    left: 50%; /*mitad del padre*/
+    transform: translateX(-50%); /*la mitad del ancho del elemento*/ /*para que se centre del todo sobre el padre*/
+    font-size: 36px;
+    color: whitesmoke;
+    /* para hacerlo redondo 1º que sus dimensiones sean cuadradas height y width*/
+    border-radius: 30px; /*tiene que ser minimo la mitad de height y width*/
+    /*para centrar la flecha en el circulo*/
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+
+/* Ejemplo poner contacto en la pagina de contacto */
+.primera{margin-top: 100px;}
+.direccion{line-height: 2em;}
+.legales h1{font-size: 26px;}
+.legales h2{
+    font-size: 18px;
+    padding: 10px;}
+.legales p, li{
+    font-size: 16px;
+    padding: 10px;}
+.legales ul{padding-left: 40px;}
+
+/* Media queries */
+@media(max-width:720px){
+    .fila{
+        display: flex;
+        flex-direction: column;
+        align-items: center;}
+    .columna{
+        margin: 20px;}
+    .separadores{
+        display: initial;}}
+    /* .col1, .col2, .col3 {flex-basis:initial;} */
+
+@media(max-width:640px){
+    .burger{display: initial;}
+    nav{display: none;}
+    .hero h1{
+        text-align: center;
+        padding: 0 10px;
+        font-size: 36px;}
+    .hero h2{
+        font-size: 24px;
+        text-align: center;
+        padding:  0 10px;}
+    .fondo{padding: 0 20px 0 20px;}
+    .eslogan{
+        font-size: 30px;
+        margin: 0px;}
+    .miniform{text-align: center;}
+    .izdo, .centro, .dcho{flex-basis: 200px;}}
+
+@media (max-width: 420px) {
+    .fila{margin: 20px 0 20px 0;}
+    .fila.primera {margin: 100px 0 20px 0;}
+    .miniform input{font-size: 20px;}
+    .miniform .boton{font-size: 20px;}
+    .ultima{ margin: 20px 0 40px 0;}
+    .izdo{
+        margin-top: 20px;
+        text-align: center;}}
+
+
+
+
